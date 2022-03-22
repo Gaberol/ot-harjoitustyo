@@ -1,8 +1,3 @@
-<<<<<<< HEAD
 # Tervetuloa
-Täällä tapahtuu *kummia*
-
-**Eihän sinua *pelota?***
-=======
-
->>>>>>> 184386a5e4ec8e22f861b101561ed12706eadce6
+[komentorivi.txt](https://github.com/Gaberol/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+[gitlog.txt](https://github.com/Gaberol/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
