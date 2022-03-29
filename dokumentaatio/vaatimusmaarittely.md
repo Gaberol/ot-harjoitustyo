@@ -1,0 +1,2 @@
+# Vaatimusmäärittely
+## Sovelluksen tarkoitus
