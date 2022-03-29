@@ -1,5 +1,5 @@
 # Ohjelmistotekniikka, harjoitustyö
-##Harjoitustyö
+## Harjoitustyö
 [vaatimusmaarittely.md](https://github.com/Gaberol/ot-harjoitustyo/edit/master/dokumentaatio/vaatimusmaarittely.md)
 
 ## Laskarit
