@@ -1,6 +1,6 @@
 # Ohjelmistotekniikka, harjoitustyö
 ## Harjoitustyö
-[vaatimusmaarittely.md](https://github.com/Gaberol/ot-harjoitustyo/edit/master/dokumentaatio/vaatimusmaarittely.md)
+[vaatimusmaarittely.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [tuntikirjanpito.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
