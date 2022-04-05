@@ -1,8 +1,8 @@
 ```mermaid
  classDiagram
- Board "1" ..> "2..8" Player
+ Game "1" ..> "2..8" Player
  Player "2.8" --> "40" Square
- class Board{
+ class Game{
      move_player(id)
  }
  class Player{
