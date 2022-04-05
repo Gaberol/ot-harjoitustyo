@@ -1,8 +1,8 @@
 # Ohjelmistotekniikka, harjoitustyö
 ## Harjoitustyö
-[vaatimusmaarittely.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[vaatimusmaarittely.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/game/dokumentaatio/vaatimusmaarittely.md)
 
-[tuntikirjanpito.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+[tuntikirjanpito.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/game/dokumentaatio/tuntikirjanpito.md)
 
 ## Laskarit
 ### Viikko 1
