@@ -1,5 +1,5 @@
 ```mermaid
-classDiagram;
+classDiagram
     Game (1) --> (*) Player
     class Game{
         board
