@@ -1,5 +1,5 @@
 # Ohjelmistotekniikka, harjoitustyö
-## Harjoitustyö
+## Dokumentaatio
 [vaatimusmaarittely.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/game/dokumentaatio/vaatimusmaarittely.md)
 
 [tuntikirjanpito.md](https://github.com/Gaberol/ot-harjoitustyo/blob/master/game/dokumentaatio/tuntikirjanpito.md)
