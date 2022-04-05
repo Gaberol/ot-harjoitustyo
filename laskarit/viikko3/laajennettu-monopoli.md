@@ -1,6 +1,6 @@
 ```mermaid
  classDiagram
- Board "1" ..> "2..8" Player
+ Board "1" --> "2..8" Player
  Start "1" --|> Square
  Jail "1" --|> Square
  Chance "*" --|> Square
