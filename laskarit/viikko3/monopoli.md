@@ -9,3 +9,4 @@ classDiagram
         money
         properties
     }
+```
