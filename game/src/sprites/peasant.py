@@ -1,5 +1,5 @@
-import pygame
 import os
+import pygame
 
 dirname = os.path.dirname(__file__)
 
@@ -13,3 +13,4 @@ class Peasant(pygame.sprite.Sprite):
 
         self.rect.x = x
         self.rect.y = y
+        

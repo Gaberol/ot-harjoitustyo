@@ -15,11 +15,11 @@ class Board:
         height = len(board_map)
         width = len(board_map[0])
 
-        for y in range(height):
-            for x in range(width):
-                cell = board_map[y][x]
-                normalized_x = x * self.tile_width
-                normalized_y = y * self.tile_width
+        for i in range(height):
+            for j in range(width):
+                cell = board_map[i][j]
+                normalized_x = j * self.tile_width
+                normalized_y = i * self.tile_width
 
                 if cell == 0:
                     continue
