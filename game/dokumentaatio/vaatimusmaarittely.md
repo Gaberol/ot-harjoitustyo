@@ -14,4 +14,6 @@ Pelissä on:
 Pelissä on graafinen käyttöliittymä, jota ohjataan hiirellä.
 
 ## Jatkokehitysideoita
-Yksinkertaisen tekoälyn kehittäminen tekisi sovelluksesta mukavan yksinpelin.
+
+
+Yksinkertaisen tekoälyn kehittäminen tekisi sovelluksesta mielekkään yksinpelin.
