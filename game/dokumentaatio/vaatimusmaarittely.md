@@ -15,5 +15,5 @@ Pelissä on graafinen käyttöliittymä, jota ohjataan hiirellä.
 
 ## Jatkokehitysideoita
 
-
-Yksinkertaisen tekoälyn kehittäminen tekisi sovelluksesta mielekkään yksinpelin.
+* Alkuperäisessä pelissä on myös puita, jotka kasvavat ja leviävät hitaasti kuolleiden sotilaiden haudoilta.
+* Yksinkertaisen tekoälyn kehittäminen tekisi sovelluksesta mielekkään yksinpelin.
