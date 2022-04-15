@@ -7,13 +7,13 @@ board_map = [[0, 1, 2, 1],
              [0, 1, 1, 0],
              [1, 1, 1, 0]]
 
-TILE_WIDTH = 50
+TILE_WIDTH = 40
 
 def main():
     height = len(board_map)
     width = len(board_map[0])
-    display_height = height * TILE_WIDTH
-    display_width = width * TILE_WIDTH
+    display_height = height * TILE_WIDTH/4*3 + TILE_WIDTH/4
+    display_width = width * TILE_WIDTH + TILE_WIDTH/2
 
     display = pygame.display.set_mode((display_width, display_height))
 
