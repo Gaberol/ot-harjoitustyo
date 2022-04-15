@@ -3,4 +3,4 @@
 - Lisätty "start"-invoke-tehtävä
 
 ## Viikko 5
-- Pelilauta on nyt kuusikulioista muodostuva ruudukko
+- Pelilauta on nyt kuusikulmioista muodostuva ruudukko
