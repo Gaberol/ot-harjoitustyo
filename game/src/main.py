@@ -1,3 +1,4 @@
+import os
 import pygame
 from board import Board
 
@@ -16,6 +17,10 @@ def main():
     display_width = width * TILE_WIDTH + TILE_WIDTH/2
 
     display = pygame.display.set_mode((display_width, display_height))
+    pygame.display.set_caption("Slay_copy")
+    dirname = os.path.dirname(__file__)
+    icon = pygame.image.load(os.path.join(dirname, "assets", "Peasant.png"))
+    pygame.display.set_icon(icon)
 
     board = Board(board_map, TILE_WIDTH)
 
