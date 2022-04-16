@@ -35,10 +35,9 @@ class Board:
                 # cell[0] == tile colour // cell[1] == unit type
                 if cell[0] == 0:
                     continue
-                self.tiles.add(Tile(normalized_x, normalized_y))
-                if cell[1] == 0:
-                    continue
-                self.units.add(Unit(normalized_x, normalized_y, cell[1]))
+                self.tiles.add(Tile(normalized_x, normalized_y, cell[0]))
+                if not cell[1] == 0:
+                    self.units.add(Unit(normalized_x, normalized_y, cell[1]))
 
                 self.all_sprites.add(
                     self.tiles,
