@@ -3,7 +3,7 @@ import pygame
 
 dirname = os.path.dirname(__file__)
 
-class Peasant(pygame.sprite.Sprite):
+class Prince(pygame.sprite.Sprite):
     def __init__(self, x=0, y=0):
         super().__init__()
 
