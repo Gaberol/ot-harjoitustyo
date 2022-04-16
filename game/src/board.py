@@ -5,6 +5,7 @@ from sprites.unit import Unit
 class Board:
     def __init__(self, board_map, tile_width):
         self.tile_width = tile_width
+        #offsets for hexagon math
         self.x_offset = tile_width/2
         self.y_offset = tile_width/4
         self.tiles = pygame.sprite.Group()
@@ -21,6 +22,7 @@ class Board:
             for j in range(width):
                 cell = board_map[i][j]
 
+                #tile grid with hexagons
                 if i%2 == 0:
                     normalized_x = j * self.tile_width
                 else:
@@ -30,16 +32,13 @@ class Board:
                 else:
                     normalized_y = i * (self.tile_width - self.y_offset)
 
-                cell_tile = cell[0]
-                cell_unit = cell[1]
-
-                if cell_tile == 0:
+                # cell[0] == tile colour // cell[1] == unit type
+                if cell[0] == 0:
                     continue
                 self.tiles.add(Tile(normalized_x, normalized_y))
-                
-                if cell_unit == 0:
+                if cell[1] == 0:
                     continue
-                self.units.add(Unit(normalized_x, normalized_y, cell_unit))
+                self.units.add(Unit(normalized_x, normalized_y, cell[1]))
 
                 self.all_sprites.add(
                     self.tiles,
