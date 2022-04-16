@@ -37,12 +37,8 @@ class Board:
                 if cell == 2:
                     self.peasants.add(Peasant(normalized_x, normalized_y))
                     self.tiles.add(Tile(normalized_x, normalized_y))
-                
-                #for k in range(width):
-                #    self.tiles.add(Tile(0*self.tile_width + k*10, 0))
 
                 self.all_sprites.add(
                     self.tiles,
                     self.peasants
-                    
                 )
