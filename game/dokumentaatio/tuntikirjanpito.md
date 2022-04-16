@@ -6,4 +6,4 @@
 | 12.4. | 1    | pylintin käyttöönotto, virheiden korjaus |
 | 15.4. | 2    | pelilaudaksi kuusikulmioruudukko |
 | 16.4. | 2    | pelilaudan käsittely uusittu |
-| yht.  | 7    | |
+| yht.  | 9    | |
