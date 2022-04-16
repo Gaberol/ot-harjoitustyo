@@ -15,5 +15,6 @@ Pelissä on graafinen käyttöliittymä, jota ohjataan hiirellä.
 
 ## Jatkokehitysideoita
 
-* Alkuperäisessä pelissä on myös puita, jotka kasvavat ja leviävät hitaasti kuolleiden sotilaiden haudoilta.
+* Alkuperäisessä pelissä on myös puita, jotka kasvavat ja leviävät kuolleiden sotilaiden haudoilta. Ruudut, joissa on puita, eivät tuota pisteitä.
+* Vaihtoehtoiset värit värisokeille pelaajille.
 * Yksinkertaisen tekoälyn kehittäminen tekisi sovelluksesta mielekkään yksinpelin.
