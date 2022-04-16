@@ -21,9 +21,9 @@ class Tile(pygame.sprite.Sprite):
         ]
         self.color = self.colors[color]
 
-        colorMask = pygame.Surface(self.image.get_size()).convert_alpha()
-        colorMask.fill((self.color))
-        self.image.blit(colorMask, (0,0), special_flags = pygame.BLEND_RGBA_MULT)
+        color_mask = pygame.Surface(self.image.get_size()).convert_alpha()
+        color_mask.fill((self.color))
+        self.image.blit(color_mask, (0,0), special_flags = pygame.BLEND_RGBA_MULT)
 
         self.rect.x = x
         self.rect.y = y
