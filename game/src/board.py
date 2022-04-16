@@ -1,6 +1,6 @@
 import pygame
 from sprites.tile import Tile
-from sprites.peasant import Peasant
+from sprites.unit import Unit
 
 class Board:
     def __init__(self, board_map, tile_width):
@@ -8,7 +8,7 @@ class Board:
         self.x_offset = tile_width/2
         self.y_offset = tile_width/4
         self.tiles = pygame.sprite.Group()
-        self.peasants = pygame.sprite.Group()
+        self.units = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
 
         self.initialize_sprites(board_map)
@@ -30,15 +30,18 @@ class Board:
                 else:
                     normalized_y = i * (self.tile_width - self.y_offset)
 
-                if cell == 0:
+                cell_tile = cell[0]
+                cell_unit = cell[1]
+
+                if cell_tile == 0:
                     continue
-                if cell == 1:
-                    self.tiles.add(Tile(normalized_x, normalized_y))
-                if cell == 2:
-                    self.peasants.add(Peasant(normalized_x, normalized_y))
-                    self.tiles.add(Tile(normalized_x, normalized_y))
+                self.tiles.add(Tile(normalized_x, normalized_y))
+                
+                if cell_unit == 0:
+                    continue
+                self.units.add(Unit(normalized_x, normalized_y, cell_unit))
 
                 self.all_sprites.add(
                     self.tiles,
-                    self.peasants
+                    self.units
                 )
