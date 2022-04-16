@@ -3,14 +3,14 @@ import pygame
 from board import Board
 
 #Hard coded board for testing
-board_map = [[00, 10, 11, 10, 00, 00, 10, 10],
-             [00, 00, 10, 10, 00, 00, 11, 10],
-             [10, 10, 10, 00, 10, 10, 10, 00],
-             [10, 10, 10, 00, 10, 10, 10, 10],
-             [00, 10, 00, 10, 10, 10, 10, 10],
-             [00, 00, 10, 10, 00, 00, 10, 10],
-             [00, 10, 11, 00, 00, 10, 10, 00],
-             [00, 10, 10, 10, 10, 11, 10, 00]]
+board_map = [[(0,0), (1,0), (1,1), (1,0), (0,0), (0,0), (1,0), (1,0)],
+             [(0,0), (0,0), (1,0), (1,0), (0,0), (0,0), (1,1), (1,0)],
+             [(1,0), (1,0), (1,0), (0,0), (1,0), (1,0), (1,0), (0,0)],
+             [(1,0), (1,0), (1,0), (0,0), (1,0), (1,0), (1,0), (1,0)],
+             [(0,0), (1,0), (0,0), (1,0), (1,0), (1,0), (1,0), (1,0)],
+             [(0,0), (0,0), (1,0), (1,0), (0,0), (0,0), (1,0), (1,0)],
+             [(0,0), (1,0), (1,1), (0,0), (0,0), (1,0), (1,0), (0,0)],
+             [(0,0), (1,0), (1,0), (1,0), (1,0), (1,1), (1,0), (0,0)]]
 
 TILE_WIDTH = 40
 
@@ -23,7 +23,7 @@ def main():
     display = pygame.display.set_mode((display_width, display_height))
     pygame.display.set_caption("Slay_copy")
     dirname = os.path.dirname(__file__)
-    icon = pygame.image.load(os.path.join(dirname, "assets", "Peasant.png"))
+    icon = pygame.image.load(os.path.join(dirname, "assets", "Unit1.png"))
     pygame.display.set_icon(icon)
 
     board = Board(board_map, TILE_WIDTH)
