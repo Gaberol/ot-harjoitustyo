@@ -4,3 +4,4 @@
 
 ## Viikko 5
 - Pelilauta on nyt kuusikulmioista muodostuva ruudukko
+- Ruudut on värikoodattu
