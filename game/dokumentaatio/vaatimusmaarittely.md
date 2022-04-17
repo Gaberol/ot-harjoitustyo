@@ -17,4 +17,5 @@ Pelissä on graafinen käyttöliittymä, jota ohjataan hiirellä.
 
 * Alkuperäisessä pelissä on myös puita, jotka kasvavat ja leviävät kuolleiden sotilaiden haudoilta. Ruudut, joissa on puita, eivät tuota pisteitä.
 * Vaihtoehtoiset värit värisokeille pelaajille.
+* Auditiivinen palaute.
 * Yksinkertaisen tekoälyn kehittäminen tekisi sovelluksesta mielekkään yksinpelin.
