@@ -22,8 +22,10 @@ def main():
 
     display = pygame.display.set_mode((display_width, display_height))
     pygame.display.set_caption("Slay_copy")
-    dirname = os.path.dirname(__file__)
-    icon = pygame.image.load(os.path.join(dirname, "assets", "Unit1.png"))
+    icon = pygame.image.load(
+        os.path.join(
+            os.path.dirname(__file__), "assets", "Unit1.png")
+        )
     pygame.display.set_icon(icon)
 
     board = Board(board_map, TILE_WIDTH)
