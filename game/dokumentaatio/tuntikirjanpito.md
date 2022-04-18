@@ -6,5 +6,5 @@
 | 12.4. | 1    | pylintin käyttöönotto, virheiden korjaus |
 | 15.4. | 2    | pelilaudaksi kuusikulmioruudukko |
 | 16.4. | 2    | pelilaudan käsittely uusittu |
-| 18.4. | 2    | Peukaloiden pyörittely, koodin tuijottaminen |
-| yht.  | 11   | |
+| 18.4. | 3    | Peukaloiden pyörittely, koodin tuijottaminen |
+| yht.  | 12   | |
