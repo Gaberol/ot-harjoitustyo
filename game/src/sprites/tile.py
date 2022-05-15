@@ -17,10 +17,10 @@ class Tile(pygame.sprite.Sprite):
 
         self.colors = [
             (0, 0, 0),
-            (10, 85, 0),
+            (140, 110, 0),
             (80, 210, 0),
-            (225, 200, 0),
-            (140, 110, 0)
+            (10, 85, 0),
+            (225, 200, 0)
         ]
         self.color = self.colors[color]
 

@@ -1,11 +1,15 @@
 import os
 import pygame
-from random import randint, choices   #temporary, remove
+from random import randint, choices
 from board import Board
 from game_loop import GameLoop
 from event_queue import EventQueue
 from renderer import Renderer
 from clock import Clock
+
+dirname = os.path.dirname(__file__)
+
+players = 2
 
 # Hard coded boards for testing
 #board_map = [[(0,0), (2,0), (2,0), (2,0), (0,0), (0,0), (3,0), (3,0)],
@@ -19,11 +23,17 @@ from clock import Clock
 
 #board_map = [[[1, 1] for t in range(8)] for r in range(8)]
 
-board_map = [[[randint(0,4), choices(
-                            population=[0, 1],
-                            weights=[0.9, 0.1],
-                            k=1
-                        )[0]] for i in range(8)] for i in range(8)]
+w = [0.8/players for p in range(players)]
+w.insert(0, 0.2)
+board_map = [[[choices(
+            population=range(players+1), 
+            weights=w, 
+            k=1)[0], 
+            choices(
+            population=[0, 1],
+            weights=[0.9, 0.1],
+            k=1)[0]
+            ] for i in range(8)] for i in range(8)]
 
 
 TILE_WIDTH = 40
@@ -37,7 +47,7 @@ def main():
     display = pygame.display.set_mode((display_width, display_height))                                                                        
     pygame.display.set_caption("Slay_copy")
     icon = pygame.image.load(
-        os.path.join(os.path.dirname(__file__), "assets", "Unit1.png")
+        os.path.join(dirname, "assets", "Unit1.png")
         )
     pygame.display.set_icon(icon)
 
@@ -45,7 +55,7 @@ def main():
     event_queue = EventQueue()
     renderer = Renderer(display, board)
     clock = Clock()
-    game_loop = GameLoop(board, renderer, event_queue, clock, TILE_WIDTH)
+    game_loop = GameLoop(board, renderer, event_queue, clock, TILE_WIDTH, players)
 
     pygame.init()
     game_loop.start()

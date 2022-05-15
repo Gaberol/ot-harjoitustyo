@@ -2,15 +2,17 @@ import pygame
 
 
 class GameLoop:
-    def __init__(self, board, renderer, event_queue, clock, tile_width):
+    def __init__(self, board, renderer, event_queue, clock, tile_width, players):
         self._board = board
         self._renderer = renderer
         self._event_queue = event_queue
         self._clock = clock
         self._tile_width = tile_width
+        self._players = players
 
         self._unit_selected = False
         self._selected_tile = 0
+        self._player = 0
 
     def start(self):
         while True:
@@ -43,3 +45,9 @@ class GameLoop:
 
     def _render(self):
         self._renderer.render()
+
+    def _advance_turn(self):
+        if self._player == self._players:
+            self._player = 1
+        else:
+            self._player += 1
