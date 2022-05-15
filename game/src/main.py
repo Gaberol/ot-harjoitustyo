@@ -9,9 +9,11 @@ from clock import Clock
 
 dirname = os.path.dirname(__file__)
 
-players = 2
+players = 4
+map_size = 13
 
 # Hard coded boards for testing
+
 #board_map = [[(0,0), (2,0), (2,0), (2,0), (0,0), (0,0), (3,0), (3,0)],
 #             [(0,0), (0,0), (2,1), (2,0), (0,0), (0,0), (3,0), (3,0)],
 #             [(1,0), (1,0), (2,0), (0,0), (2,0), (3,0), (3,1), (0,0)],
@@ -22,9 +24,36 @@ players = 2
 #             [(0,0), (1,0), (1,0), (4,0), (4,0), (4,0), (4,0), (0,0)]]
 
 #board_map = [[[1, 1] for t in range(8)] for r in range(8)]
+#half_size = map_size / 2
+#board_map = []
+#for i in range(map_size):
+#    row = []
+#    for j in range(map_size):
+#        if j <= half_size:
+#            jmod = half_size - j
+#        else:
+#            jmod = 
+#        if i <= half_size:
+#            imod = i / map_size
+#        else:
+#            imod = 1 - (i - half_size) / map_size
+#        mod = jmod + imod + 0.2
+#        w = [mod/players for p in range(players)]
+#        w.insert(0, 1-mod)
+#        row.append([choices(
+#            population=range(players+1),
+#            weights=w,
+#            k=1)[0],
+#            choices(
+#            population=[0, 1],
+#            weights=[0.9, 0.1],
+#            k=1)[0]
+#        ])
+#    board_map.append(row)
 
-w = [0.8/players for p in range(players)]
-w.insert(0, 0.2)
+            
+w = [85/players for p in range(players)]
+w.insert(0, 15)
 board_map = [[[choices(
             population=range(players+1), 
             weights=w, 
@@ -33,7 +62,7 @@ board_map = [[[choices(
             population=[0, 1],
             weights=[0.9, 0.1],
             k=1)[0]
-            ] for i in range(8)] for i in range(8)]
+            ] for i in range(map_size)] for i in range(map_size)]
 
 
 TILE_WIDTH = 40
