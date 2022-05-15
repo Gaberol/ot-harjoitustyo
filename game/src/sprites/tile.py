@@ -4,13 +4,18 @@ import pygame
 dirname = os.path.dirname(__file__)
 
 class Tile(pygame.sprite.Sprite):
-    def __init__(self, x, y, color):
+    def __init__(self, x, y, coordinates, color):
         super().__init__()
 
         self.image = pygame.image.load(
             os.path.join(dirname, "..", "assets", "Tile.png")
             )
         self.rect = self.image.get_rect()
+
+        self.rect.x = x
+        self.rect.y = y
+
+        self.coordinates = coordinates
 
         self.colors = [
             (0, 0, 0),
@@ -25,5 +30,5 @@ class Tile(pygame.sprite.Sprite):
         color_mask.fill((self.color))
         self.image.blit(color_mask, (0,0), special_flags = pygame.BLEND_RGBA_MULT)
 
-        self.rect.x = x
-        self.rect.y = y
+    def get_coordinates(self):
+        return self.coordinates
