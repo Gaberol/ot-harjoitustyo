@@ -6,6 +6,7 @@ from game_loop import GameLoop
 from event_queue import EventQueue
 from renderer import Renderer
 from clock import Clock
+from graph import Graph
 
 dirname = os.path.dirname(__file__)
 
@@ -64,6 +65,7 @@ board_map = [[[choices(
             k=1)[0]
             ] for i in range(map_size)] for i in range(map_size)]
 
+Graph(board_map)
 
 TILE_WIDTH = 40
 
