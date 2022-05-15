@@ -2,7 +2,8 @@ import pygame
 from sprites.tile import Tile
 from sprites.unit import Unit
 
-#This class uses a lot of hexagon math from https://tinyurl.com/3ad9y383
+# This class uses a lot of hexagon math from https://tinyurl.com/3ad9y383
+# Also I stuffed all the game logic here, because it was the easiest way
 class Board:
     def __init__(self, board_map, tile_width):
         self.board_map = board_map
@@ -75,11 +76,10 @@ class Board:
                 self.board_map[y_section][x_section][0],
                 self.board_map[y_section][x_section][1]]
 
-    def move_unit(self, pos, start, target):
-        unit_type = start[3]
-                                                                                
-        unit = [u for u in self.units if
-            u.get_coordinates() == (start[0], start[1])][0]
+    def move_unit(self, start, target):
+        unit_type = start[3]                                                  
+        unit = [u for u in self.units
+            if u.get_coordinates() == (start[0], start[1])][0]
         self.board_map[start[1]][start[0]][1] = 0
         unit.kill()
         target_x = target[0]

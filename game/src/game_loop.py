@@ -9,6 +9,9 @@ class GameLoop:
         self._clock = clock
         self._tile_width = tile_width
 
+        self._unit_selected = False
+        self._selected_tile = 0
+
     def start(self):
         while True:
             if self._handle_events() == False:
@@ -26,7 +29,15 @@ class GameLoop:
                 if clicked_tile[0] >= 0 and clicked_tile[1] >= 0:
                     print(f"clicked at hex {clicked_tile[0], clicked_tile[1]} tile: {clicked_tile[2]} unit: {clicked_tile[3]}")
                     if clicked_tile[3] > 0:
-                        self._board.move_unit(pos, clicked_tile, (0, 0))
+                        if not self._unit_selected:
+                            self._selected_tile = clicked_tile
+                            self._unit_selected = True
+                        else:
+                            pass
+                    elif clicked_tile[2] > 0:
+                        if self._unit_selected:
+                            self._board.move_unit(self._selected_tile, clicked_tile)
+                            self._unit_selected = False
             elif event.type == pygame.QUIT:
                 return False
 
