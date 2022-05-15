@@ -17,8 +17,8 @@ TILE_WIDTH = 40
 def main():
     height = len(board_map)
     width = len(board_map[0])
-    display_height = height * TILE_WIDTH/4*3 + TILE_WIDTH/4
-    display_width = width * TILE_WIDTH + TILE_WIDTH/2
+    display_height = height * TILE_WIDTH//4*3 + TILE_WIDTH//4
+    display_width = width * TILE_WIDTH + TILE_WIDTH//2
 
     display = pygame.display.set_mode((display_width, display_height))
     pygame.display.set_caption("Slay_copy")
@@ -40,6 +40,12 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            if event.type == pygame.MOUSEBUTTONUP:
+                pos = pygame.mouse.get_pos()
+                
+                m_coords = board.mouse_event(pos)
+                if 0 <= m_coords[0] < width and 0 <= m_coords[1] < height:
+                    print(f"clicked at hex {m_coords}")
         pygame.display.update()
 
     pygame.quit()
