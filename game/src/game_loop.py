@@ -22,9 +22,11 @@ class GameLoop:
         for event in self._event_queue.get():
             if event.type == pygame.MOUSEBUTTONUP:
                 pos = pygame.mouse.get_pos()
-                m_coords = self._board.mouse_event(pos)
-                if m_coords[0] >= 0 and m_coords[1] >= 0:
-                    print(f"clicked at hex {m_coords}")
+                clicked_tile = self._board.mouse_event(pos)
+                if clicked_tile[0] >= 0 and clicked_tile[1] >= 0:
+                    print(f"clicked at hex {clicked_tile[0], clicked_tile[1]} tile: {clicked_tile[2]} unit: {clicked_tile[3]}")
+                    if clicked_tile[3] > 0:
+                        self._board.move_unit(pos, clicked_tile, (0, 0))
             elif event.type == pygame.QUIT:
                 return False
 
