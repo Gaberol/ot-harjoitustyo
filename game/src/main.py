@@ -10,8 +10,8 @@ from graph import Graph
 
 dirname = os.path.dirname(__file__)
 
-players = 4
-map_size = 13
+PLAYERS = 4
+MAP_SIZE = 13
 
 # Hard coded boards for testing
 
@@ -53,17 +53,17 @@ map_size = 13
 #    board_map.append(row)
 
             
-w = [85/players for p in range(players)]
+w = [85/PLAYERS for p in range(PLAYERS)]
 w.insert(0, 15)
 board_map = [[[choices(
-            population=range(players+1), 
+            population=range(PLAYERS+1), 
             weights=w, 
             k=1)[0], 
             choices(
             population=[0, 1],
             weights=[0.9, 0.1],
             k=1)[0]
-            ] for i in range(map_size)] for i in range(map_size)]
+            ] for i in range(MAP_SIZE)] for i in range(MAP_SIZE)]
 
 Graph(board_map)
 
@@ -86,7 +86,7 @@ def main():
     event_queue = EventQueue()
     renderer = Renderer(display, board)
     clock = Clock()
-    game_loop = GameLoop(board, renderer, event_queue, clock, TILE_WIDTH, players)
+    game_loop = GameLoop(board, renderer, event_queue, clock, TILE_WIDTH, PLAYERS)
 
     pygame.init()
     game_loop.start()
