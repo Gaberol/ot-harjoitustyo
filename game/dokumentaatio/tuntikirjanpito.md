@@ -7,4 +7,5 @@
 | 15.4. | 2    | pelilaudaksi kuusikulmioruudukko |
 | 16.4. | 2    | pelilaudan käsittely uusittu |
 | 18.4. | 3    | Peukaloiden pyörittely, koodin tuijottaminen |
-| yht.  | 12   | |
+| 15.5. | 12   | Epätoivoinen yritys saada jotain kasaan |
+| yht.  | 24   | |
