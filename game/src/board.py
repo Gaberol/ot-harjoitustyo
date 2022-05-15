@@ -64,4 +64,6 @@ class Board:
                     y_section -= 1
                 else:
                     x_section -= 1
+        if x_section == self.map_width or y_section == self.map_height:
+            return (-1, -1)
         return (x_section, y_section)
